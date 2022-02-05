@@ -1,0 +1,46 @@
+
+    @page { size: A4 }
+    :root {
+        --MyOrange: rgb(255, 161, 54); 
+    }
+
+    body {
+        font-size: 11pt;
+    }
+
+    div .child-color:nth-child(even){
+        background-color: #eeeeee;
+    }
+
+    .border-top-sm {
+        border-top: 1px solid #ccc;
+        padding-top: 18px;
+    }
+    
+    .col1 {
+        width: 15%; 
+        text-align: end; 
+        float: left;
+    }
+
+    .col2 {
+        padding-left: 18%; 
+        text-align: start;
+    }
+    
+    a {
+        color: var(--MyOrange);
+        text-decoration: none;
+    }
+
+    .vertical-icon-line {
+        border-left: 2px solid #ccc;
+        height: auto;
+        position: relative;
+        left: 12px;
+    }
+
+    .content {
+        justify-content: center;
+        display: grid;
+    }
