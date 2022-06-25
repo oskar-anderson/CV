@@ -3,33 +3,41 @@ export default class Index {
     static async main() {
         let pages = await Index.getPages();
         let contentElement = document.querySelector(".content");
-        for (let page of pages) {
-            contentElement.innerHTML += page;
-        };
+        contentElement.innerHTML = pages.join('');
     }
 
     static async getPages() {
         let pages = [];
         for (let i = 1; true; i++) {
-            let pageUrl = new URL(document.location.href).origin + `/pages/page_${i}.html`;
+            let pageUrl = document.location.href + `pages/page_${i}.html`;
+            console.log(`fetching ${pageUrl}`);
+            let page = null;
             try {
-                let page = await fetch(pageUrl).then(
-                    x => { 
-                        if (!x.ok) {
-                            throw Error(`Page with ${pageUrl} returned non 2xx response!`);
-                        }
-                        return x.text() 
-                    }
-                    ).catch(e => {
-                        throw Error(`Page with ${pageUrl} does not exist! ${e}`);
-                    });
-                pages.push(page);
+                page = await Index.getPage(pageUrl)
             } catch (error) {
-                console.error(error);
-                break;
+                if (error instanceof Response) {
+                    // This is expected for graceful loop exit
+                    if (error.status === 404) {
+                        break;
+                    }
+                    throw new Error(`Unknown server error occured: ${error.statusText}`);
+                }
+                throw new Error(`Something went wrong: ${error.message || error}`);
             }
+            pages.push(page);
         }
         return pages;
     }
 
+    static async getPage(pageUrl)  {
+        let fechResult = null;
+        // browser will log possible fetch error, but the error is not thrown
+        fechResult = await fetch(pageUrl);
+        
+        if (!fechResult.ok) {
+            // network error - non 2xx response
+            throw fechResult;
+        }
+        return fechResult.text();
+    };
 }

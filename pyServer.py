@@ -9,6 +9,8 @@ Handler.extensions_map.update({
       ".js": "application/javascript",
 });
 
-httpd = socketserver.TCPServer(("", PORT), Handler)
-print("Server running on http://localhost:1337")
-httpd.serve_forever()
+socketserver.TCPServer.allow_reuse_address = True
+server = socketserver.TCPServer(("", PORT), Handler)
+
+print(f'Server running on http://localhost:{PORT}')
+server.serve_forever()
