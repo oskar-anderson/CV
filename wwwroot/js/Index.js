@@ -9,7 +9,8 @@ export default class Index {
     static async getPages() {
         let pages = [];
         for (let i = 1; true; i++) {
-            let pageUrl = document.location.href + `pages/page_${i}.html`;
+            let githubPathExtra = document.location.pathname.split('/').length === 0 ? '' : document.location.pathname.split('/')[0]; 
+            let pageUrl = document.location.origin + githubPathExtra + `/pages/page_${i}.html`;
             console.log(`fetching ${pageUrl}`);
             let page = null;
             try {
