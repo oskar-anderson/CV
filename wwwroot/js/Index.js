@@ -1,3 +1,5 @@
+import Settings from "../Settings.js";
+
 export default class Index {
 
     static async main() {
@@ -9,8 +11,7 @@ export default class Index {
     static async getPages() {
         let pages = [];
         for (let i = 1; true; i++) {
-            let githubPathExtra = document.location.pathname.split('/').length < 2 ? '' : '/' + document.location.pathname.split('/')[1]; 
-            let pageUrl = document.location.origin + githubPathExtra + `/pages/page_${i}.html`;
+            let pageUrl = new Settings().getBasePath() + `/pages/page_${i}.html`;
             console.log(`fetching ${pageUrl}`);
             let page = null;
             try {
