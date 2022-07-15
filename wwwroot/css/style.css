@@ -2,19 +2,15 @@
 @page { size: A4 }
 :root {
     --MyOrange: rgb(255, 161, 54); 
+    --std-tab-size: 20px;;
+}
+* {
+    margin: 0;
 }
 
 body {
     font-size: 11pt;
-}
-
-div .child-color:nth-child(even){
-    background-color: #eeeeee;
-}
-
-.border-top-sm {
-    border-top: 1px solid #ccc;
-    padding-top: 18px;
+    font-family: Roboto, Verdana, Tahoma, sans-serif;
 }
 
 .col1 {
@@ -33,13 +29,6 @@ a {
     text-decoration: none;
 }
 
-.vertical-icon-line {
-    border-left: 2px solid #ccc;
-    height: auto;
-    position: relative;
-    left: 12px;
-}
-
 .content {
     justify-content: center;
     display: grid;
@@ -47,4 +36,14 @@ a {
 
 .o-list-item-std-vertical-margin + .o-list-item-std-vertical-margin {
     margin-top: 0.4em;
+}
+
+.h2, h2 {
+    font-size: 22px;
+    margin: 6px 0;
+}
+
+.h3, h3, .h4, h4 {
+    font-size: 18px;
+    margin: 6px 0;
 }
