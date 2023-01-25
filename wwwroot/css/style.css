@@ -1,11 +1,16 @@
 
 @page { size: A4 }
 :root {
-    --MyOrange: rgb(255, 161, 54); 
+    --primary-hl-color: rgb(255, 161, 54); 
     --std-tab-size: 20px;;
 }
 * {
     margin: 0;
+}
+
+a {
+    color: var(--primary-hl-color);
+    text-decoration: none;
 }
 
 body {
@@ -15,8 +20,9 @@ body {
 
 .col1 {
     width: 15%; 
-    text-align: end; 
+    text-align: start; 
     float: left;
+    margin: 0 0 0 calc(var(--std-tab-size) * 1);
 }
 
 .col2 {
@@ -24,26 +30,10 @@ body {
     text-align: start;
 }
 
-a {
-    color: var(--MyOrange);
-    text-decoration: none;
-}
-
-.content {
-    justify-content: center;
-    display: grid;
-}
-
 .o-list-item-std-vertical-margin + .o-list-item-std-vertical-margin {
-    margin-top: 0.4em;
+    margin-top: 0.2em;
 }
 
-.h2, h2 {
-    font-size: 22px;
-    margin: 6px 0;
-}
-
-.h3, h3, .h4, h4 {
-    font-size: 18px;
-    margin: 6px 0;
+.o-std-margin-bottom {
+    margin-bottom: 0.2em;
 }
