@@ -18,22 +18,31 @@ body {
     font-family: Roboto, Verdana, Tahoma, sans-serif;
 }
 
-.col1 {
-    width: 15%; 
-    text-align: start; 
-    float: left;
-    margin: 0 0 0 calc(var(--std-tab-size) * 1);
-}
-
-.col2 {
-    padding-left: 18%; 
-    text-align: start;
-}
-
 .o-list-item-std-vertical-margin + .o-list-item-std-vertical-margin {
     margin-top: 0.2em;
 }
 
 .o-std-margin-bottom {
     margin-bottom: 0.2em;
+}
+
+.section-heading {
+    text-transform: uppercase;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+}
+
+.flex-gap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-gap > div {
+    margin: 0 0.8em;
+}
+
+.grid-item {
+    border-radius: 6px;
+    padding: 4px 14px;
+    overflow: clip;
 }
