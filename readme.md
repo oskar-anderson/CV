@@ -1,8 +1,8 @@
 # CV
 
-Karl Oskar Anderson resume in PDF friendly format. Made with ❤️ using basic HTML.
+Karl Oskar Anderson resume written in PDF friendly HTML using A4 CSS size.
 
-### Running the server
+### Running the server locally
 ```
 python pyServer.py
 OR
@@ -13,4 +13,8 @@ python3 pyServer.py
 1. Open in browser
 2. Open `Print` menu (`Ctrl + p`)
 3. Change `Destination` to: `Microsoft Print to PDF` or `Save as PDF`
-4. Click `Save` or `Print`
+4. Use settings `Paper Size: A4` and check `Print Backgrounds`
+5. Click `Save` or `Print`
+
+### Dependencies
+[paper-css](https://github.com/cognitom/paper-css) - simple CSS library for printing
