@@ -1,11 +1,14 @@
 {
   "name": "cv",
   "private": true,
+  "homepage": "https://oskar-anderson.github.io/CV",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite --base ./ build",
     "preview": "vite preview"
   },
   "dependencies": {
