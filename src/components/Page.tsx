@@ -1,6 +1,6 @@
 import "paper-css/paper.min.css";
 import profilePicture from "../assets/profile-25-01-2023_cropped-300-300.png";
-import Markdown from 'markdown-to-jsx';
+import TrimmedMarkdown from "./TrimmedMarkdown";
 
 interface SectionHeading {
     Svg: string;
@@ -96,10 +96,10 @@ export default function Page(model: Props) {
                                         marginRight: "0.8em",
                                     }}
                                 >
-                                    <Markdown>{x.Svg}</Markdown>
+                                    <i style={{ fontSize: 16 }} className={x.Svg}></i>
                                 </div>
                                 <div>
-                                    <Markdown>{x.MarkDownContent}</Markdown>
+                                    <TrimmedMarkdown>{x.MarkDownContent}</TrimmedMarkdown>
                                 </div>
                             </div>
                         );
@@ -109,7 +109,7 @@ export default function Page(model: Props) {
                     <div>
                         <h2 style={{ display: "flex", marginBottom: "0.4em" }}>
                             <div style={{ display: "flex", alignItems: "center" }}>
-                                <Markdown>{model.CategorizedListSections.Heading.Svg}</Markdown>
+                                <i style={{ fontSize: 16 }} className={model.CategorizedListSections.Heading.Svg}></i>
                             </div>
                             <span style={{ marginLeft: "4px" }} className="section-heading">
                                 {model.CategorizedListSections.Heading.Title}
@@ -145,13 +145,13 @@ export default function Page(model: Props) {
                     <div>
                         <h2 style={{ display: "flex", marginBottom: "0.4em" }}>
                             <div style={{ display: "flex", alignItems: "center" }}>
-                                <Markdown>{model.WorkSection.Heading.Svg}</Markdown>
+                                <i style={{ fontSize: 16 }} className={model.WorkSection.Heading.Svg}></i>
                             </div>
                             <span style={{ marginLeft: "4px" }} className="section-heading">
                                 {model.WorkSection.Heading.Title}
                             </span>
                         </h2>
-                        <div style={{ margin: "0 0 0 calc(var(--std-tab-size) * 1)" }}>
+                        <div style={{ marginLeft: "20px" }}>
                             {
                                 model.WorkSection.Content.map(x => {
                                     return (
@@ -168,7 +168,7 @@ export default function Page(model: Props) {
                                                 </div>
                                             </div>
                                             <p>
-                                                <Markdown>{x.MarkDownContent}</Markdown>
+                                                <TrimmedMarkdown>{x.MarkDownContent}</TrimmedMarkdown>
                                             </p>
                                         </div>
                                     );
@@ -186,7 +186,7 @@ export default function Page(model: Props) {
                     <div>
                         <h2 style={{ display: "flex", marginBottom: "0.4em" }}>
                             <div style={{ display: "flex", alignItems: "center" }}>
-                                <Markdown>{model.PersonalProjectsSection.Heading.Svg}</Markdown>
+                                <i style={{ fontSize: 16 }} className={model.PersonalProjectsSection.Heading.Svg}></i>
                             </div>
                             <span style={{ marginLeft: "4px" }} className="section-heading">
                                 {model.PersonalProjectsSection.Heading.Title}
@@ -197,7 +197,7 @@ export default function Page(model: Props) {
                                 {model.PersonalProjectsSection.Content.map(x => {
                                     return (
                                         <li className="o-list-item-std-vertical-margin">
-                                            <Markdown>{x.MarkDownContent}</Markdown>
+                                            <TrimmedMarkdown>{x.MarkDownContent}</TrimmedMarkdown>
                                         </li>
                                     );
                                 })}
@@ -214,7 +214,7 @@ export default function Page(model: Props) {
                     <div>
                         <h2 style={{ display: "flex", marginBottom: "0.4em" }}>
                             <div style={{ display: "flex", alignItems: "center" }}>
-                                <Markdown>{model.EducationSection.Heading.Svg}</Markdown>
+                                <i style={{ fontSize: 16 }} className={model.EducationSection.Heading.Svg}></i>
                             </div>
                             <span style={{ marginLeft: "4px" }} className="section-heading">
                                 {model.EducationSection.Heading.Title}
@@ -229,7 +229,7 @@ export default function Page(model: Props) {
                                             style={{ position: "relative" }}
                                         >
                                             <div>
-                                                <Markdown>{x.MarkDownContent}</Markdown>
+                                                <TrimmedMarkdown>{x.MarkDownContent}</TrimmedMarkdown>
                                             </div>
                                             <div style={{ position: "absolute", right: 0, top: 0 }}>
                                                 {x.DateFinished}

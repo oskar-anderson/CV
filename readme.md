@@ -32,3 +32,5 @@ npm run deploy
 [paper-css](https://github.com/cognitom/paper-css) - simple CSS library for printing
 
 [markdown-to-jsx](https://github.com/probablyup/markdown-to-jsx) - converts Markdown or HTML strings to JSX
+
+[Bootstrap Icons](https://icons.getbootstrap.com/) - generates SVG from className
