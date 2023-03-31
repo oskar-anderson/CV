@@ -2,7 +2,7 @@
 @page { size: A4 }
 :root {
     --primary-hl-color: rgb(255, 161, 54); 
-    --std-tab-size: 20px;;
+    --std-tab-size: 20px;
 }
 * {
     margin: 0;
