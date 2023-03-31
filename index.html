@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-  <script type="text/javascript">
-    let link = document.location.href + "wwwroot/html/index.html";
-    let manualRedirectMsgEl = document.querySelector('.manualRedirectMsg');
-    if (manualRedirectMsgEl !== null) {
-      manualRedirectMsgEl.innerHTML = `If you are not redirected automatically, follow this <a href='${link}'>link to index</a>.`
-    }
-    window.location.href = link;
-  </script>
-  <title>Page Redirection...</title>
-</head>
-<body>
-  <p class="manualRedirectMsg"></p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/react.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet"> 
+    
+    <title>Karl Oskar Anderson CV</title>
+  </head>
+  <body class="A4">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
