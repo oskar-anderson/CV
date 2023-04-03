@@ -52,7 +52,7 @@ function App() {
                 },
                 {
                     CategoryName: "Frameworks",
-                    List: ["ASP.NET Core", "Slim Framework", "Aurelia", "Vue", "Spring Boot"]
+                    List: ["ASP.NET Core", "Slim Framework", "Aurelia", "Vue", "React", "Spring Boot"]
                 },
                 {
                     CategoryName: "Databases",
@@ -60,7 +60,7 @@ function App() {
                 },
                 {
                     CategoryName: "Software",
-                    List: ["JetBrains IDEs", "Git", "Postman", "VirtualBox", "AutoHotkey"]
+                    List: ["JetBrains IDEs", "Git", "Postman", "VirtualBox"]
                 },
                 {
                     CategoryName: "Other",
