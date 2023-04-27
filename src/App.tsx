@@ -95,7 +95,7 @@ function App() {
             Content: [
                 {
                     MarkDownContent: `
-                        Database visualization tool with scripting support written in TypeScript
+                        Database visualization tool with scripting support written in TypeScript and React
                         <a href="https://github.com/oskar-anderson/RasterModeler">
                             [link]
                         </a>
