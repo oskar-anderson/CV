@@ -60,7 +60,7 @@ function App() {
                 },
                 {
                     CategoryName: "Software",
-                    List: ["JetBrains IDEs", "Git", "Postman", "VirtualBox"]
+                    List: ["JetBrains IDEs", "Git", "Postman"]
                 },
                 {
                     CategoryName: "Other",
