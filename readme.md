@@ -13,10 +13,6 @@ Build and Run:
 npm run build
 npm run preview
 ```
-Deploy to gh-pages branch on Github:
-```
-npm run deploy
-```
 
 
 ### Saving to PDF
